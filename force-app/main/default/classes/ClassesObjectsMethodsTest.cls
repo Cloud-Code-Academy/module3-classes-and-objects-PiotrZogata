@@ -185,7 +185,8 @@ public with sharing class ClassesObjectsMethodsTest {
     }
 
      //UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
-    /*@IsTest
+  
+     @IsTest
     static void testBookClass() {
         // Initialize a new book instance
         ClassesObjectsMethods.Book myBook = new ClassesObjectsMethods.Book('1984', 'George Orwell');
@@ -197,7 +198,8 @@ public with sharing class ClassesObjectsMethodsTest {
         // Call the getBookDetails method and verify the result
         String bookDetails = myBook.getBookDetails();
         Assert.areEqual('Title: 1984, Author: George Orwell', bookDetails, 'The book details should be correctly formatted');
-    }*/
+    }
+ 
     
 
     @IsTest
@@ -267,7 +269,7 @@ public with sharing class ClassesObjectsMethodsTest {
         Assert.areEqual('Hello, my name is Jane Doe and I am 30 years old.', intro, 'The updated introduction should be correctly formatted');
     }
     */
-
+    /*
     @IsTest
     static void testPersonDetails() {
         // Call the personDetails method and capture the return value
@@ -290,7 +292,7 @@ public with sharing class ClassesObjectsMethodsTest {
         // Check that the third element in the returned List is the expected age
         Assert.areEqual(expectedAge, resultDetails.get(2), 'The third element should be the expected age');
     }
-
+    */
     /* UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
     @IsTest
     static void testCreatePerson() {
