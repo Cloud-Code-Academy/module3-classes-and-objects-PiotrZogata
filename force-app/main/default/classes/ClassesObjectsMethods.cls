@@ -266,7 +266,7 @@ public with sharing class ClassesObjectsMethods {
         // Declare three public instance variables - title, author, pages
         public String title;
         public String author;
-        public String pages;
+        public Integer pages;
     
         // Book constructor to initialize the title and author
         public Book(String title, String author) {
@@ -319,7 +319,7 @@ public with sharing class ClassesObjectsMethods {
         myBook1.title = 'Harry Potter and the Chamber of Secrets';
         // Update the pages for myBook1 to 352
         //myBook1.setNumbersOfPages('352');
-        myBook1.pages = '352';
+        myBook1.pages = 352;
         
         // Add myBook1 to the list
         books.add(myBook1);
@@ -327,7 +327,7 @@ public with sharing class ClassesObjectsMethods {
         Book myBook2 = new Book('A Brief History of Time', 'Stephen Hawking');
 
         // Update the pages for A Brief History of Time to 256
-        myBook1.pages = '256';
+        myBook2.pages = 256;
         
         // Add the book to the list
         books.add(myBook2);
