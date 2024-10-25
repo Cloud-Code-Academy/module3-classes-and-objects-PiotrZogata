@@ -147,12 +147,13 @@ public with sharing class ClassesObjectsMethods {
     for(String str : scientistNames){
         //If the name contains the letter 'G' or 'g', add the name to the result string
         if (str.contains('G') || str.contains('g')) {
-            str1 = str1 + str + ',';
+            str1 = str1 + str + ','; 
         }
     }
     // Remove the last comma from the result string
         str1 = str1.left(str1.length() - 1);
     return str1;
+    
 }
     
 
@@ -182,9 +183,9 @@ public with sharing class ClassesObjectsMethods {
      */
     public static Integer generateRandomNumber() {
         // Use Math class to generate number between 50 and 100
-
+    Integer randomNumber = (Integer) (Math.random() * (100 - 50 + 1)) + 50;
         // Return the random integer
-        return null; // Replace null with the variable you used to store the result
+        return randomNumber;
     }
 
     /**
@@ -195,11 +196,12 @@ public with sharing class ClassesObjectsMethods {
      */
     public static String getCurrentDate() {
         // Get the todays date
-
+        Date d = Date.today();
         // Format the current date
-
+        String d1 =string.valueOf(d.format());
         // Return the result
-        return null; // Replace null with the variable you used to store the result
+        //return Date.today().format());
+        return d1;
     }
 
     /**
