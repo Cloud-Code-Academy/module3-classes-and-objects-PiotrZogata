@@ -141,19 +141,20 @@ public with sharing class ClassesObjectsMethods {
     public static String findTheScientist() {
         // The list of scientists' names
         List<String> scientistNames = new List<String>{'Tim Berners-Lee', 'Alan Turing', 'Grace Hopper', 'Donald Knuth', 'Guido van Rossum', 'Ken Thompson', 'Stephen Hawking'};
-
         // The variable to store the concatenated string
-
-        // Loop through the list of scientists' names
-
-            // If the name doesn't contain the letter 'G', skip this iteration
-
-            // Add the name to the result string, followed by a comma
-
-        // Remove the last comma from the result string
-
-        return null; // Replace null with the variable you used to store the result
+    String str1 = '';
+    // Loop through the list of scientists' names
+    for(String str : scientistNames){
+        //If the name contains the letter 'G' or 'g', add the name to the result string
+        if (str.contains('G') || str.contains('g')) {
+            str1 = str1 + str + ',';
+        }
     }
+    // Remove the last comma from the result string
+        str1 = str1.left(str1.length() - 1);
+    return str1;
+}
+    
 
     /**
      * Question 6
@@ -165,11 +166,12 @@ public with sharing class ClassesObjectsMethods {
      */
     public static Double calculateDifferenceOfSquares(Double a, Double b) {
         // Square the input numbers using the Math.pow() function
-
+        Double c = Math.pow(a, 2);
+        Double d = Math.pow(b, 2);
         // Calculate the absolute difference using Math.abs() function
-
+        Double result = Math.abs(c - d);
         // Return the result
-        return null; // Replace null with the variable you used to store the result
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
