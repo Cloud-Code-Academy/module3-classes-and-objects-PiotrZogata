@@ -94,15 +94,18 @@ public with sharing class ClassesObjectsMethods {
      */
     public static String removeDuplicateWords(String sentence) {
         // Split the sentence into words
+        String[] result = sentence.split(' ');
 
         // Create a set to store the unique words
-
+        Set<String> mySet = new Set<String>();
         // Add each word to the set
-
+        for (String str : result) {
+            mySet.add(str);
+            }
         // Join the unique words back into a sentence
-
+            String sentence1 = String.join(mySet, ' ');
         // Return the sentence with unique words
-        return null; // Replace null with the variable you used to store the result
+        return sentence1; 
     }
 
     /**
@@ -115,16 +118,17 @@ public with sharing class ClassesObjectsMethods {
      */
     public static Integer countVowels(String str) {
         // Initialize the result Integer
-
-        /*
-        for () {
+        Integer result = 0;
+        for (Integer i = 0; i < str.length(); i++) {
             // get individual characters from the string - hint use substring or split
+            String s = str.substring(i, i + 1);
             // check if the character is a vowel
             // if it is a vowel, increment the result Integer
+            if (s == 'a' || s ==  'e' || s == 'i' || s == 'o'  || s == 'u'){
+                result ++;
+            }
         }
-        */
-
-        return null; // Replace null with the variable you used to store the result
+        return result; 
     }
 
     /**
