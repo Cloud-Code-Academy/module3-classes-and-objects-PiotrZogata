@@ -264,19 +264,26 @@ public with sharing class ClassesObjectsMethods {
      */
     public class Book {
         // Declare three public instance variables - title, author, pages
-        // title
-        // author
-        // pages
+        public String title;
+        public String author;
+        public String pages;
     
         // Book constructor to initialize the title and author
-        public Book() {
+        public Book(String title, String author) {
             // Initialize the title and author
+            this.title = title;
+            this.author = author;
         }
-    
+        //I create a setter to manipulate a pages in Question 13;
+        void setNumbersOfPages(String pages){
+            this.pages = pages;
+        }
+
         // Method that returns the details of the book
         public String getBookDetails() {
             // return A string containing the details of the book in the format "Title: <title>, Author: <author>"
-            return null; // Replace null with the variable you used to store the result
+    
+            return ('Title: '+ title +', Author: '+author); 
         }
     }
     
@@ -289,11 +296,12 @@ public with sharing class ClassesObjectsMethods {
      */
     public static String createAndGetBookDetails() {
         // Create a Book object with title "A Brief History of Time" and author "Stephen Hawking"
-
+            Book book = new Book('A Brief History of Time', 'Stephen Hawking');
         // Call the getBookDetails method on the book object to get the details of the book
+        String result = book.getBookDetails();
 
         // Return the details of the book
-        return null; // Replace null with the variable you used to store the result
+        return result;
     }
 
     /**
@@ -307,18 +315,21 @@ public with sharing class ClassesObjectsMethods {
      */
     public static List<Book> generateBookList(Book myBook1) {
         // Create a list of books
-
+        List<Book> books = new List<Book>();
         // Update the title and author of myBook1
-
+        myBook1.author = 'J.K. Rowling';
+        myBook1.title = 'Harry Potter and the Chamber of Secrets';
         // Update the pages for myBook1 to 352
-
+        myBook1.setNumbersOfPages('352');
+        // Add myBook1 to the list
+        books.add(myBook1);
         // Create a new Book object with title "A Brief History of Time" and author "Stephen Hawking"
-
+        Book book2 = new Book('A Brief History of Time', 'Stephen Hawking');
         // Update the pages for A Brief History of Time to 256
-
+        book2.setNumbersOfPages('256');
         // Add the book to the list
-        
-        return null; // Replace null with the variable you used to store the result      
+        books.add(book2);
+        return books;     
     }
 
 
