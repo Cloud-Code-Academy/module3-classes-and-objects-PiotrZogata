@@ -355,7 +355,7 @@ public with sharing class ClassesObjectsMethods {
         // Return a string in the format "Hello, my name is <name> and I am <age> years old."
         // For example, introduceYourself() should return a string like "Hello, my name is John Doe and I am 28 years old."
         public String introduceYourself() {
-            return 'Hello, my name is '+name+' and I am  '+age+' years old.'; 
+            return 'Hello, my name is '+name+' and I am '+age+' years old.';
         }
 
         // Getter method that returns the name of the person
@@ -427,15 +427,15 @@ public with sharing class ClassesObjectsMethods {
      * @return A list of new Person objects.
      */
     public static List<Person> createMultiplePersons(List<String> names, Integer age) {
-
+        List<Person> listOfpersons = new List<Person>();
         // Loop through each name in the provided list of names
             // Create a new Person object for each name
-            
-            // Add the new Person object to the list of Person objects
-        
-        
+        for(Integer i = 0; i < names.size(); i++){
+                Person person = new Person(names.get(i), age);
+                listOfpersons.add(person);
+        }    // Add the new Person object to the list of Person objects 
         // Return the list of Person objects
-        return null; // Replace null with the variable you used to store the result
+        return listOfpersons;
     }
 
 
@@ -450,6 +450,12 @@ public with sharing class ClassesObjectsMethods {
      * @return The Person object of the older person.
      */
     public static Person getOlderPerson(Person person1, Person person2) {
-        return null; // Replace null with the variable you used to store the result
+        if(person1.age > person2.age){
+             return person1;
+        }else if(person1.age < person2.age){
+            return person2;
+        } else{
+            return (person1);
+        }
     }
 }
