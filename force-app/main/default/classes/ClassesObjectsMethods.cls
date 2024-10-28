@@ -345,9 +345,9 @@ public with sharing class ClassesObjectsMethods {
     public class Person {
         // Declare private two instance variables - (TEXT) name and (Number) age
         private String name;
-        private String age;
+        private Integer age;
         // Constructor to initialize the name and age
-        public Person(String name, String age) {
+        public Person(String name, Integer age) {
             this.name = name;
             this.age = age;
         }
@@ -364,7 +364,7 @@ public with sharing class ClassesObjectsMethods {
         }
 
         // Getter method that returns the age of the person
-        public String getAge(){
+        public Integer getAge(){
             return age;
         }
 
@@ -374,7 +374,7 @@ public with sharing class ClassesObjectsMethods {
         }
 
         // Setter method that sets the age of the person
-        public void setAge(String age){
+        public void setAge(Integer age){
             this.age = age;
         }
     }
@@ -390,15 +390,16 @@ public with sharing class ClassesObjectsMethods {
         List<String> results = new List<String>();
         // Create a new instance of Person class
         // Name the person 'John Doe' and set the age to 28
-        Person person = new Person('John Doe', '28');
+        Person person = new Person('John Doe', 28);
         // Add the details of the person using the introduceYourself method
         person.introduceYourself();
         // Get the name of the person using the getter method and add it to the list
         String name = person.getName();
         results.add(name);
         // Get the age of the person using the getter method and add it to the list
-        String age = person.getAge();
-        results.add(age);
+        Integer age = person.getAge();
+        String ageString = String.valueOf(age);
+        results.add(ageString);
         return results; 
     }
 
@@ -411,7 +412,7 @@ public with sharing class ClassesObjectsMethods {
      */
     public static Person createPerson(String name, Integer age) {
         // Create a new instance of the Person class using the provided name and age
-        Person person = new Person('John Doe', '28');
+        Person person = new Person(name, age);
         // Return the new instance of the Person class
         return person; 
     }
