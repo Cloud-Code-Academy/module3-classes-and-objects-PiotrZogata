@@ -392,7 +392,8 @@ public with sharing class ClassesObjectsMethods {
         // Name the person 'John Doe' and set the age to 28
         Person person = new Person('John Doe', 28);
         // Add the details of the person using the introduceYourself method
-        person.introduceYourself();
+        String introducing = person.introduceYourself();
+        results.add(introducing);
         // Get the name of the person using the getter method and add it to the list
         String name = person.getName();
         results.add(name);
